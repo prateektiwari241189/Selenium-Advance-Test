@@ -16,7 +16,7 @@ def driver(request):
     elif scenario == 'test2':
         options = webdriver.FirefoxOptions()
         options.add_argument("--start-maximized")
-        platform = "macOS Catalina"
+        platform = "Windows 10"
         version = "latest"
     selenium_endpoint = "http://{}:{}@hub.lambdatest.com/wd/hub".format(username, access_key)
     option = {
