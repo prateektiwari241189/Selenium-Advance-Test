@@ -24,7 +24,7 @@ class TestClass:
         if platform.system() == "Darwin":
             actions.key_down(Keys.COMMAND).click(explore_all_integrations).key_up(Keys.COMMAND).perform()
         else:
-            actions.key_down(Keys.CONTROL).click(explore_all_integrations).key_up(Keys.CONTROL).perform()
+            actions.key_down(Keys.COMMAND).click(explore_all_integrations).key_up(Keys.COMMAND).perform()
         original_window = driver.current_window_handle
         assert WebDriverWait(driver, 20).until(ec.number_of_windows_to_be(2))
         all_windows = driver.window_handles
