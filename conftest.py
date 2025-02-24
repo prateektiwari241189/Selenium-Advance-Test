@@ -14,7 +14,7 @@ def driver(request):
         platform = "Windows 10"
         version = "128"
     elif scenario == 'test2':
-        options = webdriver.SafariOptions()
+        options = webdriver.EdgeOptions()
         options.add_argument("--start-maximized")
         platform = "macOS Catalina"
         version = "latest"
