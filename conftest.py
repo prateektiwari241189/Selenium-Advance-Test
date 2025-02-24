@@ -14,10 +14,10 @@ def driver(request):
         platform = "Windows 10"
         version = "128"
     elif scenario == 'test2':
-        options = webdriver.EdgeOptions()
+        options = webdriver.SafariOptions()
         options.add_argument("--start-maximized")
-        platform = "macOS Ventura"
-        version = "127"
+        platform = "macOS Catalina"
+        version = "latest"
     selenium_endpoint = "http://{}:{}@hub.lambdatest.com/wd/hub".format(username, access_key)
     option = {
         "platform": platform,
