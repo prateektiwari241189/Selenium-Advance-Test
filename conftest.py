@@ -9,15 +9,15 @@ def driver(request):
     access_key = "LT_YyhB9S6FacoOJ5WjRUWav5tWxilQEuMMaTAxkeQ4zgDWpRP"
     scenario = request.param
     if scenario == 'test1':
-        options = webdriver.ChromeOptions()
-        options.add_argument("--start-maximized")
-        platform = "Windows 10"
-        version = "128"
-    elif scenario == 'test2':
         options = webdriver.EdgeOptions()
         options.add_argument("--start-maximized")
         platform = "macOS Ventura"
         version = "127.0"
+    elif scenario == 'test2':
+        options = webdriver.ChromeOptions()
+        options.add_argument("--start-maximized")
+        platform = "Windows 10"
+        version = "128"
     selenium_endpoint = "http://{}:{}@hub.lambdatest.com/wd/hub".format(username, access_key)
     option = {
         "platform": platform,
